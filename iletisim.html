@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arven Grup ile iletişime geçin. Personel tedarik ve kurumsal outsourcing çözümleri için bize ulaşın."
+    />
+    <meta
+      name="keywords"
+      content="arven grup iletişim, personel tedarik iletişim, outsourcing iletişim"
+    />
+    <meta name="author" content="Arven Grup" />
+
+    <title>İletişim | Arven Grup</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Modern Minimal Contact Page Styles */
+      .contact-minimal {
+        padding: 0;
+        background: var(--color-bg);
+      }
+
+      .contact-hero {
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 800px;
+        height: 800px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+      }
+
+      .contact-hero-content {
+        text-align: center;
+        color: var(--color-white);
+        padding: 120px 24px 80px;
+      }
+
+      .contact-hero-content h1 {
+        font-family: var(--font-display);
+        font-size: clamp(48px, 8vw, 80px);
+        font-weight: 400;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      .contact-hero-content p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .contact-main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 80px 24px 120px;
+      }
+
+      /* Quick Contact Row */
+      .quick-contact {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 80px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .quick-item {
+        text-align: center;
+      }
+
+      .quick-item i {
+        font-size: 20px;
+        color: var(--color-accent);
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .quick-item a,
+      .quick-item span {
+        font-size: 15px;
+        color: var(--color-primary);
+        font-weight: 500;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      .quick-item a:hover {
+        color: var(--color-accent);
+      }
+
+      .quick-item small {
+        font-size: 12px;
+        color: var(--color-secondary);
+        display: block;
+        margin-top: 4px;
+      }
+
+      /* Form Section */
+      .form-section {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .form-header h2 {
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--color-primary);
+        margin-bottom: 12px;
+      }
+
+      .form-header p {
+        font-size: 15px;
+        color: var(--color-secondary);
+      }
+
+      .minimal-form .form-group {
+        margin-bottom: 28px;
+      }
+
+      .minimal-form label {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin-bottom: 8px;
+      }
+
+      .minimal-form input,
+      .minimal-form select,
+      .minimal-form textarea {
+        width: 100%;
+        padding: 16px 0;
+        font-family: var(--font-body);
+        font-size: 15px;
+        border: none;
+        border-bottom: 1px solid var(--color-border);
+        background: transparent;
+        transition: border-color 0.3s ease;
+        border-radius: 0;
+      }
+
+      .minimal-form input:focus,
+      .minimal-form select:focus,
+      .minimal-form textarea:focus {
+        outline: none;
+        border-bottom-color: var(--color-primary);
+      }
+
+      .minimal-form input::placeholder,
+      .minimal-form textarea::placeholder {
+        color: var(--color-secondary);
+      }
+
+      .minimal-form select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+      }
+
+      .minimal-form textarea {
+        resize: none;
+        min-height: 120px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .btn-minimal {
+        width: 100%;
+        padding: 18px 32px;
+        background: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 16px;
+      }
+
+      .btn-minimal:hover {
+        background: var(--color-accent);
+      }
+
+      .btn-minimal:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      .btn-minimal i {
+        margin-left: 8px;
+      }
+
+      /* Footer Info */
+      .contact-footer-info {
+        margin-top: 80px;
+        padding-top: 60px;
+        border-top: 1px solid var(--color-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      .footer-col h4 {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-primary);
+        margin-bottom: 16px;
+      }
+
+      .footer-col p,
+      .footer-col a {
+        font-size: 14px;
+        color: var(--color-secondary);
+        line-height: 1.8;
+      }
+
+      .footer-col a:hover {
+        color: var(--color-accent);
+      }
+
+      .social-minimal {
+        display: flex;
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      .social-minimal a {
+        font-size: 18px;
+        color: var(--color-primary);
+        transition: color 0.3s ease;
+      }
+
+      .social-minimal a:hover {
+        color: var(--color-accent);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .quick-contact {
+          flex-direction: column;
+          gap: 32px;
+          align-items: center;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+
+        .contact-footer-info {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .social-minimal {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar scrolled" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.png" alt="Arven Grup" class="logo-img" />
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+          <li><a href="index.html#hakkimizda" class="nav-link">Hakkımızda</a></li>
+          <li><a href="index.html#hizmetler" class="nav-link">Hizmetler</a></li>
+          <li><a href="index.html#referanslar" class="nav-link">Referanslar</a></li>
+          <li><a href="iletisim.html" class="nav-link active">İletişim</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="tel:+905447821023" class="nav-phone">
+            <i class="fas fa-phone"></i>
+            <span>+90 544 782 10 23</span>
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Menü">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <section class="contact-minimal">
+      <!-- Hero -->
+      <div class="contact-hero">
+        <div class="contact-hero-content">
+          <h1>İletişim</h1>
+          <p>Size nasıl yardımcı olabiliriz?</p>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="contact-main">
+        <!-- Quick Contact -->
+        <div class="quick-contact">
+          <div class="quick-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+905447821023">+90 544 782 10 23</a>
+            <small>Pzt - Cuma, 09:00 - 18:00</small>
+          </div>
+          <div class="quick-item">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/905447821023" target="_blank">WhatsApp</a>
+            <small>7/24 Aktif</small>
+          </div>
+          <div class="quick-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@arvengrup.com">info@arvengrup.com</a>
+            <small>24 saat içinde dönüş</small>
+          </div>
+          <div class="quick-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Kocaeli, Türkiye</span>
+            <small>Merkez Ofis</small>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+          <div class="form-header">
+            <h2>Mesaj Gönderin</h2>
+            <p>Formu doldurun, en kısa sürede size dönelim.</p>
+          </div>
+
+          <form class="minimal-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Ad Soyad</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Adınız"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">E-posta</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ornek@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="05XX XXX XX XX"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Konu</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Seçiniz</option>
+                  <option value="Personel Talebi">Personel Talebi</option>
+                  <option value="Fiyat Teklifi">Fiyat Teklifi</option>
+                  <option value="İş Başvurusu">İş Başvurusu</option>
+                  <option value="Genel Bilgi">Genel Bilgi</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mesajınız</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Mesajınızı buraya yazın..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-minimal">
+              Gönder
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="contact-footer-info">
+          <div class="footer-col">
+            <h4>Çalışma Saatleri</h4>
+            <p>
+              Pazartesi - Cuma: 09:00 - 18:00<br />
+              Cumartesi: 10:00 - 14:00<br />
+              Pazar: Kapalı
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Sosyal Medya</h4>
+            <div class="social-minimal">
+              <a href="https://www.instagram.com/arven.grup/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://wa.me/905447821023" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Acil İletişim</h4>
+            <p>
+              Acil personel ihtiyaçlarınız için<br />
+              <a href="https://wa.me/905447821023" target="_blank">WhatsApp hattımız 7/24 aktif</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2025 Arven Grup. Tüm Hakları Saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

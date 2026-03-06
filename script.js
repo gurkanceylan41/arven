@@ -471,8 +471,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, startDelay);
     });
 
-    // ===== CONTACT FORM =====
+    // ===== CONTACT FORM - EMAILJS =====
     const contactForm = document.getElementById('contact-form');
+
+    // EmailJS'i başlat
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('NzmnjHu-kvMNGxnQq');
+    }
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -495,9 +500,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Başarılı mesaj (Gerçek projede API'ye gönderilir)
-            alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
-            contactForm.reset();
+            // Gönder butonunu devre dışı bırak
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>Gönderiliyor...</span><i class="fas fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+
+            // EmailJS ile gönder
+            const templateParams = {
+                name: data.name,
+                email: data.email,
+                phone: data.phone || 'Belirtilmedi',
+                title: data.subject || 'Genel',
+                message: data.message
+            };
+
+            emailjs.send('service_xk5bc3l', 'template_5bv8908', templateParams)
+                .then(() => {
+                    alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin veya bizi telefonla arayın.');
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 
