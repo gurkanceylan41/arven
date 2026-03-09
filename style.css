@@ -1319,6 +1319,7 @@ ul {
         border-radius: 8px;
         box-shadow: none;
         background: transparent;
+        overflow: hidden;
     }
 
     .partner-logo-full {
@@ -1367,6 +1368,7 @@ ul {
     .partner-card {
         padding: 5px;
         border-radius: 6px;
+        overflow: hidden;
     }
 
     /* Leroy ve Gölaş hariç diğer logoları büyüt */
