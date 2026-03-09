@@ -1318,7 +1318,7 @@ ul {
         padding: 10px;
         border-radius: 8px;
         box-shadow: none;
-        background: transparent;
+        background: var(--color-white);
         overflow: hidden;
     }
 
@@ -1370,6 +1370,7 @@ ul {
         padding: 8px;
         border-radius: 6px;
         overflow: hidden;
+        background: var(--color-white);
     }
 
     /* Leroy ve Gölaş hariç diğer logoları büyüt */
