@@ -1314,8 +1314,8 @@ ul {
     .partner-card {
         width: 100%;
         height: auto;
-        aspect-ratio: 3/2;
-        padding: 8px;
+        aspect-ratio: 1/1;
+        padding: 10px;
         border-radius: 8px;
         box-shadow: none;
         background: transparent;
@@ -1366,7 +1366,8 @@ ul {
     }
 
     .partner-card {
-        padding: 5px;
+        aspect-ratio: 1/1;
+        padding: 8px;
         border-radius: 6px;
         overflow: hidden;
     }
