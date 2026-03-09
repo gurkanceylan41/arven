@@ -1327,6 +1327,15 @@ ul {
         object-fit: contain;
         opacity: 1;
     }
+
+    /* Leroy ve Gölaş hariç diğer logoları büyüt */
+    .partner-card:nth-child(1) .partner-logo-full,
+    .partner-card:nth-child(2) .partner-logo-full,
+    .partner-card:nth-child(3) .partner-logo-full,
+    .partner-card:nth-child(4) .partner-logo-full,
+    .partner-card:nth-child(5) .partner-logo-full {
+        transform: scale(1.3);
+    }
 }
 
 /* Small Mobile */
@@ -1353,6 +1362,15 @@ ul {
     .partner-card {
         padding: 5px;
         border-radius: 6px;
+    }
+
+    /* Leroy ve Gölaş hariç diğer logoları büyüt */
+    .partner-card:nth-child(1) .partner-logo-full,
+    .partner-card:nth-child(2) .partner-logo-full,
+    .partner-card:nth-child(3) .partner-logo-full,
+    .partner-card:nth-child(4) .partner-logo-full,
+    .partner-card:nth-child(5) .partner-logo-full {
+        transform: scale(1.3);
     }
 }
 
