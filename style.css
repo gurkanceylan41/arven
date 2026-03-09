@@ -1359,6 +1359,11 @@ ul {
         grid-column: 2;
     }
 
+    /* Leroy logosuna hafif yuvarlaklık */
+    .partners-grid .partner-card:nth-child(7) .partner-logo-full {
+        border-radius: 6px;
+    }
+
     .partner-card {
         padding: 5px;
         border-radius: 6px;
