@@ -497,6 +497,29 @@ ul {
 
     .nav-contact-btn {
         display: flex;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .nav-contact-btn span {
+        display: none;
+    }
+
+    .nav-contact-btn i {
+        font-size: 14px;
+    }
+
+    .nav-whatsapp {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .nav-actions {
+        gap: 10px;
     }
 }
 
