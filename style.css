@@ -485,6 +485,13 @@ ul {
     }
 
     .nav-contact-group {
+        display: flex;
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .nav-contact-group .nav-phone {
         display: none;
     }
 
